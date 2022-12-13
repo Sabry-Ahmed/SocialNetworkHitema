@@ -1,0 +1,59 @@
+{
+  "users": [
+    {
+      "email": "Jok@test.com",
+      "password": "$2a$10$qzLqISiNBdCLMhy8u.yte.0kn25M8fjyIWDN22kFn5FpwftGXjemu",
+      "pseudo": "Joker",
+      "urlImgProfil": "test",
+      "id": 1
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "contenu": "I am bored",
+      "urlImgArticle": "https://source.unsplash.com/random/1000x300",
+      "like": 2,
+      "pseudo": "AHMED",
+      "": "",
+      "date": 1649277945051,
+      "commentaires": [
+        {
+          "id": 1,
+          "contenu": "lorem ipsum",
+          "pseudo": "lorem ipsum",
+          "dt": 1649277945051
+        },
+        {
+          "id": 2,
+          "contenu": "lorem ipsum",
+          "pseudo": "lorem ipsum",
+          "dt": 1649277945051
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "contenu": "lorem ipsum",
+      "urlImgArticle": "https://source.unsplash.com/random/1000x300",
+      "like": 5,
+      "pseudo": "FaBien",
+      "": "",
+      "date": 1649277945051,
+      "commentaires": [
+        {
+          "id": 1,
+          "contenu": "lorem ipsum",
+          "pseudo": "lorem ipsum",
+          "dt": 1649277945051
+        },
+        {
+          "id": 4,
+          "contenu": "lorem ipsum",
+          "pseudo": "lorem ipsum",
+          "dt": 1649277945051
+        }
+      ]
+    }
+  ]
+}

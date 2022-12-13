@@ -1,0 +1,74 @@
+<template>
+    <div v-if="!userStore.user.isLogged" id="nav">
+        <div id="nav-item" class="nav-separation">
+            <img id="nav-image" src="../assets/images/home.png" />
+            <router-link to="/">Fil d'actualités</router-link>
+        </div>
+        <div id="nav-item" class="nav-separation">
+            <img id="nav-image" src="../assets/images/user.png" />
+            <router-link to="/register">Créer un profil</router-link>
+        </div>
+        <div id="nav-item">
+            <img id="nav-image" src="../assets/images/login.png" />
+            <router-link to="/login">Se connecter</router-link>
+        </div>
+    </div>
+    <div v-else id="nav">
+        <div id="nav-item" class="nav-separation">
+            <img id="nav-image" src="../assets/images/home.png" />
+            <router-link to="/"><h3>Fil d'actualités</h3></router-link>
+        </div>
+        <div id="nav-item" v-on:click="this.userStore.logout">
+            <img id="nav-image" src="../assets/images/logout.png" />
+            <h3>Déconnexion</h3>
+        </div>
+    </div>
+</template>
+
+<script>
+import {useUserStore} from "../stores/userStore"
+
+export default {
+    data() {
+        return {
+            userStore: useUserStore()
+        }
+    }
+}
+
+</script>
+
+<style scoped>
+
+#nav {
+    width: 90%;
+    height: fit-content;
+    margin-top: 30px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#nav-item {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#nav-image {
+    width: 30px;
+    height: 30px;
+    padding-right: 10px;
+}
+
+.nav-separation {
+    border-bottom: 1px solid black;
+}
+
+
+</style>
